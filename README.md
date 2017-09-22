@@ -125,8 +125,8 @@ cp -r ~/Downloads/chromeos_setup/chromeoscopy ./
 ```
 11. Setup Git
 ```
-git config --global user.name "r1ft4469"
-git config --global user.email pennoser@gmail.com
+git config --global user.name <USERNAME>
+git config --global user.email <EMAIL>
 git config --global core.editor vim
 cd ~
 git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1
