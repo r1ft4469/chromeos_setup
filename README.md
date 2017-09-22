@@ -89,6 +89,7 @@ sudo enter-chroot
 sudo apt-get install kali-linux-full
 sudo apt-get install vim
 sudo apt-get install curl
+sudo apt-get install git
 ```
 9. Setup Vim
 ```
