@@ -54,7 +54,8 @@ term_.prefs_.set('color-palette-overrides',
                         color_scheme.base06]);
 ```
 5. Install Powerline Font:
-`sudo mkdir -p /usr/local/share/fonts
+```
+sudo mkdir -p /usr/local/share/fonts
 sudo wget -P /usr/local/share/fonts https://raw.github.com/Lokaltog/powerline/develop/font/PowerlineSymbols.otf
 mkdir -p /tmp/test/
 sudo mount --bind /home/chronos/ /tmp/test/
@@ -65,15 +66,21 @@ cat > .fonts.conf << FONTS
 <fontconfig>
 	<dir>/usr/local/share/fonts</dir>
 </fontconfig>
-FONTS`
+FONTS
+```
 6. Install Crouton from [https://github.com/dnschneid/crouton]
 7. Setup CHROOT for Kali-rolling
-`sudo sh ~/Downloads/crouton -e -r kali-rolling -t cli-extras`
+```
+sudo sh ~/Downloads/crouton -e -r kali-rolling -t cli-extras
+```
 8. Install Kali Tools
-`sudo enter-chroot
-sudo apt-get install kali-linux-full`
+```
+sudo enter-chroot
+sudo apt-get install kali-linux-full
+```
 9. Setup Vim
-`sudo enter-chroot
+```
+sudo enter-chroot
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 cat > ~/.vimrc << VIMRC
@@ -89,15 +96,17 @@ VIMRC
 git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
 cd ~/.vim/bundle
 git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle
-git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/bundle/vim-airline-themes`
+git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/bundle/vim-airline-themes
+```
 10. Setup Git
-`git config --global user.name "r1ft4469"
+```
+git config --global user.name "r1ft4469"
 git config --global user.email pennoser@gmail.com
 git config --global core.editor vim
 cd ~
 git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1
 echo GIT_PROMPT_ONLY_IN_REPO=1 >> .bashrc
 echo source ~/.bash-git-prompt/gitprompt.sh >> .bashrc
-echo GIT_PROMPT_THEME=Solarized >> .bashrc`
-	
+echo GIT_PROMPT_THEME=Solarized >> .bashrc
+```
 	
