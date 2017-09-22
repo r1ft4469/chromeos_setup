@@ -98,8 +98,7 @@ sudo apt-get install git
 ```
 9. Clone Repository in Downloads
 ```
-sudo enter-chroot
-cd Downloads
+cd ~/Downloads
 git clone https://github.com/r1ft4469/chromeos_setup
 cd chromeos_setup
 ```
