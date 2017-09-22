@@ -90,7 +90,22 @@ sudo apt-get install git
 ```
 cd ~/Downloads
 git clone https://github.com/r1ft4469/chromeos_setup
-cd chromeos_setup
+git clone https://github.com/wernight/powerline-web-fonts
+```
+9. Add Powerline Fonts to Secure Shell
+```
+mv powerline-web-fonts .powerline
+Install 'Web Server for Chrome'
+Configure Server with:
+1. Run In Background
+2. Start on login
+3. Folder: /.powerline
+Start Server
+```
+Open Settings (CTRL+SHIFT+P)
+```
+font-family: "Source Code Pro", monospace
+user-css: 127.0.0.1:8887/PowerlineFonts.css
 ```
 9. Setup Vim
 ```
@@ -100,6 +115,8 @@ cat > ~/.vimrc << VIMRC
 execute pathogen#infect()
 syntax enable
 set background=dark
+set number
+set showtabline=2
 colorscheme solarized
 filetype plugin indent on
 let g:airline_theme='solarized'
