@@ -122,3 +122,4 @@ echo GIT_PROMPT_ONLY_IN_REPO=1 >> .bashrc
 echo GIT_PROMPT_THEME=Solarized >> .bashrc
 echo source ~/.bash-git-prompt/gitprompt.sh >> .bashrc
 ```
+11. Reboot
