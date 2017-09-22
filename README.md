@@ -20,6 +20,7 @@ Pin
 Open In Window
 ```
 4. Setup crosh (Use CTL+SHIFT+J to open Java Console):
+	In Java Console
 ```
 var color_scheme = {
         'base00': '#002b36',
@@ -68,27 +69,16 @@ term_.prefs_.set('color-palette-overrides',
                         color_scheme.base04,
                         color_scheme.base06]);
 ```
-5. Install Powerline Font:
+	Open Settings (CTRL+SHIFT+P)
 ```
-sudo mkdir -p /usr/local/share/fonts
-sudo wget -P /usr/local/share/fonts https://raw.github.com/Lokaltog/powerline/develop/font/PowerlineSymbols.otf
-mkdir -p /tmp/test/
-sudo mount --bind /home/chronos/ /tmp/test/
-cd /tmp/test/user
-cat > .fonts.conf << FONTS
-<?xml version="1.0"?>
-<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
-<fontconfig>
-	<dir>/usr/local/share/fonts</dir>
-</fontconfig>
-FONTS
+Font Size: 13
 ```
-6. Install Crouton from [https://github.com/dnschneid/crouton]
-7. Setup CHROOT for Kali-rolling
+5. Install Crouton from [https://github.com/dnschneid/crouton]
+6. Setup CHROOT for Kali-rolling
 ```
 sudo sh ~/Downloads/crouton -e -r kali-rolling -t cli-extras
 ```
-8. Install Kali Tools
+7. Install Kali Tools
 ```
 sudo enter-chroot
 sudo apt-get install kali-linux-full
@@ -96,13 +86,13 @@ sudo apt-get install vim
 sudo apt-get install curl
 sudo apt-get install git
 ```
-9. Clone Repository in Downloads
+8. Clone Repository in Downloads
 ```
 cd ~/Downloads
 git clone https://github.com/r1ft4469/chromeos_setup
 cd chromeos_setup
 ```
-10. Setup Vim
+9. Setup Vim
 ```
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
@@ -113,7 +103,7 @@ set background=dark
 colorscheme solarized
 filetype plugin indent on
 let g:airline_theme='solarized'
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 let g:airline_solarized_bg='dark'
 vmap <C-c> y:call SendViaOSC52(getreg('"'))<cr>
 VIMRC
@@ -123,7 +113,7 @@ git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle
 git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/bundle/vim-airline-themes
 cp -r ~/Downloads/chromeos_setup/chromeoscopy ./
 ```
-11. Setup Git
+10. Setup Git
 ```
 git config --global user.name <USERNAME>
 git config --global user.email <EMAIL>
@@ -134,7 +124,7 @@ echo GIT_PROMPT_ONLY_IN_REPO=1 >> .bashrc
 echo GIT_PROMPT_THEME=Solarized >> .bashrc
 echo source ~/.bash-git-prompt/gitprompt.sh >> .bashrc
 ```
-12. Setup VPN
+11. Setup VPN
 ```
 mkdir ~/vpn
 cat > ~/vpn/vpn.sh << VPN
@@ -145,4 +135,3 @@ echo openvpn --config ~/vpn/config.ovpn --auth-user-pass >> ~/vpn/vpn.sh
 chmod +x openvpn
 cp ~/Downloads/chromeos_setup/config.ovpn ~/vpn/
 ```
-13. Reboot
