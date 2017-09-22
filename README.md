@@ -2,9 +2,17 @@ Chrome OS Setup Commands
 
 ====
 
-1. Run Inital Setup
-2. Get Developer Mode
-3. Set 
+1. Get Developer Mode
+```
+ESC+F3+Power
+At Recovery Screen
+CTRL+D
+```
+2. Run Inital Setup
+3. Set Password
+```
+sudo passwd chronos
+```
 3. Install Secure Shell
 4. Setup crosh (Use CTL+SHIFT+J to open Java Console):
 ```
