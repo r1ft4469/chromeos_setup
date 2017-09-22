@@ -96,9 +96,15 @@ sudo apt-get install vim
 sudo apt-get install curl
 sudo apt-get install git
 ```
-9. Setup Vim
+9. Clone Repository in Downloads
 ```
 sudo enter-chroot
+cd Downloads
+git clone https://github.com/r1ft4469/chromeos_setup
+cd chromeos_setup
+```
+10. Setup Vim
+```
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 cat > ~/.vimrc << VIMRC
@@ -116,8 +122,9 @@ git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
 cd ~/.vim/bundle
 git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle
 git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/bundle/vim-airline-themes
+cp -r ~/Downloads/chromeos_setup/chromeoscopy ./
 ```
-10. Setup Git
+11. Setup Git
 ```
 git config --global user.name "r1ft4469"
 git config --global user.email pennoser@gmail.com
@@ -128,4 +135,15 @@ echo GIT_PROMPT_ONLY_IN_REPO=1 >> .bashrc
 echo GIT_PROMPT_THEME=Solarized >> .bashrc
 echo source ~/.bash-git-prompt/gitprompt.sh >> .bashrc
 ```
-11. Reboot
+12. Setup VPN
+```
+mkdir ~/vpn
+cat > ~/vpn/vpn.sh << VPN
+#!/bin/sh
+stop shill && start shill BLACKLISTED DEVICES=tun0
+VPN
+echo openvpn --config ~/vpn/config.ovpn --auth-user-pass >> ~/vpn/vpn.sh
+chmod +x openvpn
+cp ~/Downloads/chromeos_setup/config.ovpn ~/vpn/
+```
+13. Reboot
