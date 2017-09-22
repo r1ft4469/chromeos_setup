@@ -14,6 +14,11 @@ CTRL+D
 sudo passwd chronos
 ```
 3. Install Secure Shell
+```
+Target: chronos@>crosh
+Pin
+Open In Window
+```
 4. Setup crosh (Use CTL+SHIFT+J to open Java Console):
 ```
 var color_scheme = {
