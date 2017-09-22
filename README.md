@@ -110,6 +110,7 @@ filetype plugin indent on
 let g:airline_theme='solarized'
 let g:airline_powerline_fonts = 1
 let g:airline_solarized_bg='dark'
+vmap <C-c> y:call SendViaOSC52(getreg('"'))<cr>
 VIMRC
 git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
 cd ~/.vim/bundle
