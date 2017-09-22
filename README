@@ -5,7 +5,8 @@
 4. Setup crosh:
 	a. Press CTRL+SHIFT+J
 	b. Paste:
-`var color_scheme = {
+```
+var color_scheme = {
         'base00': '#002b36',
         'base01': '#073642',
         'base02': '#586e75',
@@ -50,7 +51,8 @@ term_.prefs_.set('color-palette-overrides',
                         color_scheme.base01,
                         color_scheme.base02,
                         color_scheme.base04,
-                        color_scheme.base06]);`
+                        color_scheme.base06]);
+```
 5. Install Powerline Font:
 `sudo mkdir -p /usr/local/share/fonts
 sudo wget -P /usr/local/share/fonts https://raw.github.com/Lokaltog/powerline/develop/font/PowerlineSymbols.otf
