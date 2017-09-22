@@ -87,6 +87,8 @@ sudo sh ~/Downloads/crouton -e -r kali-rolling -t cli-extras
 ```
 sudo enter-chroot
 sudo apt-get install kali-linux-full
+sudo apt-get install vim
+sudo apt-get install curl
 ```
 9. Setup Vim
 ```
