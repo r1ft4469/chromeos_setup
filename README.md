@@ -6,9 +6,7 @@ Chrome OS Setup Commands
 2. Get Developer Mode
 3. Set 
 3. Install Secure Shell
-4. Setup crosh:
-	a. Press CTRL+SHIFT+J
-	b. Paste:
+4. Setup crosh (Use CTL+SHIFT+J to open Java Console):
 ```
 var color_scheme = {
         'base00': '#002b36',
