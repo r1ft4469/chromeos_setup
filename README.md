@@ -148,7 +148,7 @@ export PS1="{\[$(tput sgr0)\]\[\033[38;5;1m\]\t\[$(tput sgr0)\]\[\033[38;5;15m\]
 BASHRC
 exit
 ```
-12. Reboot
+13. Reboot
 ```
 sudo reboot
 ```
