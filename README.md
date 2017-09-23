@@ -79,10 +79,11 @@ Font Size: 13
 ```
 sudo sh ~/Downloads/crouton -e -r kali-rolling -t ~/Downloads/chromeos_setup/cli-rift.sh
 ```
-8. Install Kali Tools
+8. Setup Kali
 ```
 sudo enter-chroot
 sudo apt-get install kali-linux-full
+sudo hostname kali
 ```
 9. Setup Vim
 ```
