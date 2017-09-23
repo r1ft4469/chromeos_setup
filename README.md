@@ -19,8 +19,8 @@ Target: chronos@>crosh
 Pin
 Open In Window
 ```
-4. Setup crosh (Use CTL+SHIFT+J to open Java Console):
-	In Java Console
+4. Install Join
+5. Setup crosh (Use CTL+SHIFT+J to open Java Console):
 ```
 var color_scheme = {
         'base00': '#002b36',
@@ -73,19 +73,30 @@ term_.prefs_.set('color-palette-overrides',
 ```
 Font Size: 13
 ```
-5. Install Crouton from [https://github.com/dnschneid/crouton]
-6. Download Repository and Extract
-7. Setup CHROOT for Kali-rolling
+6. Install Crouton from [https://github.com/dnschneid/crouton]
+7. Download Repository and Extract
+8. Setup CHROOT for Kali-rolling
 ```
 sudo sh ~/Downloads/crouton -e -r kali-rolling -t ~/Downloads/chromeos_setup/cli-rift.sh
 ```
-8. Setup Kali
+9. Setup Kali
 ```
 sudo enter-chroot
 sudo apt-get install kali-linux-full
 sudo hostname kali
 ```
-9. Setup Vim
+10. Setup Git
+```
+git config --global user.name <USERNAME>
+git config --global user.email <EMAIL>
+git config --global core.editor vim
+cd ~
+git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1
+echo GIT_PROMPT_ONLY_IN_REPO=1 >> .bashrc
+echo GIT_PROMPT_THEME=Solarized >> .bashrc
+echo source ~/.bash-git-prompt/gitprompt.sh >> .bashrc
+```
+11. Setup Vim
 ```
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
@@ -108,18 +119,7 @@ git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle
 git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/bundle/vim-airline-themes
 cp -r ~/Downloads/chromeos_setup/chromeoscopy ./
 ```
-10. Setup Git
-```
-git config --global user.name <USERNAME>
-git config --global user.email <EMAIL>
-git config --global core.editor vim
-cd ~
-git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1
-echo GIT_PROMPT_ONLY_IN_REPO=1 >> .bashrc
-echo GIT_PROMPT_THEME=Solarized >> .bashrc
-echo source ~/.bash-git-prompt/gitprompt.sh >> .bashrc
-```
-11. Setup VPN
+12. Setup VPN
 ```
 exit
 mkdir ~/vpn
@@ -131,11 +131,11 @@ echo openvpn --config ~/vpn/config.ovpn --auth-user-pass >> ~/vpn/vpn.sh
 chmod +x openvpn
 cp ~/Downloads/chromeos_setup/config.ovpn ~/vpn/
 ```
-12. Set .bashrc PS1
+13. Set .bashrc PS1
 ```
 export PS1="\[\033[38;5;7m\]{\[$(tput sgr0)\]\[\033[38;5;1m\]\t\[$(tput sgr0)\]\[\033[38;5;7m\]}\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;2m\]\u\[$(tput sgr0)\]\[\033[38;5;11m\]@\[$(tput sgr0)\]\[\033[38;5;2m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;7m\][\[$(tput sgr0)\]\[\033[38;5;5m\]\w\[$(tput sgr0)\]\[\033[38;5;7m\]]\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;4m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
 ```
-13. Reboot
+14. Reboot
 ```
 sudo reboot
 ```
