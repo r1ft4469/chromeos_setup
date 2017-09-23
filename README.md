@@ -117,6 +117,8 @@ git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
 cd ~/.vim/bundle
 git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle
 git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/bundle/vim-airline-themes
+git clone git://github.com/airblade/vim-gitgutter.git
+git clone git://github.com/ervandew/supertab.git ~/.vim/bundle
 cp -r ~/Downloads/chromeos_setup/chromeoscopy ./
 ```
 12. Setup VPN
