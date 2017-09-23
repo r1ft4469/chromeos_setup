@@ -74,22 +74,15 @@ term_.prefs_.set('color-palette-overrides',
 Font Size: 13
 ```
 5. Install Crouton from [https://github.com/dnschneid/crouton]
-6. Setup CHROOT for Kali-rolling
+6. Download Repository and Extract
+7. Setup CHROOT for Kali-rolling
 ```
-sudo sh ~/Downloads/crouton -e -r kali-rolling -t cli-extras
+sudo sh ~/Downloads/crouton -e -r kali-rolling -t ~/Downloads/chromeos_setup/cli-rift.sh
 ```
-7. Install Kali Tools
+8. Install Kali Tools
 ```
 sudo enter-chroot
 sudo apt-get install kali-linux-full
-sudo apt-get install vim
-sudo apt-get install curl
-sudo apt-get install git
-```
-8. Clone Repository in Downloads
-```
-cd ~/Downloads
-git clone https://github.com/r1ft4469/chromeos_setup
 ```
 9. Setup Vim
 ```
