@@ -90,22 +90,6 @@ sudo apt-get install git
 ```
 cd ~/Downloads
 git clone https://github.com/r1ft4469/chromeos_setup
-git clone https://github.com/powerline/fonts
-```
-9. Add Powerline Fonts to Secure Shell
-Open Settings (CTRL+SHIFT+P)
-```
-font-family: "Source Code Pro", monospace
-user-css-text:
-@font-face {
-  font-family: 'Source Code Pro';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Source Code Pro'), url('https://github.com/powerline/fonts/blob/master/SourceCodePro/Sauce%20Code%20Powerline%20Regular.otf') format('opentype');
-}
-body {
-  font-family: 'Source Code Pro' !important;
-}
 ```
 9. Setup Vim
 ```
@@ -143,6 +127,7 @@ echo source ~/.bash-git-prompt/gitprompt.sh >> .bashrc
 ```
 11. Setup VPN
 ```
+exit
 mkdir ~/vpn
 cat > ~/vpn/vpn.sh << VPN
 #!/bin/sh
@@ -151,6 +136,17 @@ VPN
 echo openvpn --config ~/vpn/config.ovpn --auth-user-pass >> ~/vpn/vpn.sh
 chmod +x openvpn
 cp ~/Downloads/chromeos_setup/config.ovpn ~/vpn/
+```
+12. Set .bashrc PS1
+```
+cat > ~/.bashrc << BASHRC
+export PS1="{\[$(tput sgr0)\]\[\033[38;5;1m\]\t\[$(tput sgr0)\]\[\033[38;5;15m\]} \[$(tput sgr0)\]\[\033[38;5;2m\]\u\[$(tput sgr0)\]\[\033[38;5;11m\]@\[$(tput sgr0)\]\[\033[38;5;2m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] [\[$(tput sgr0)\]\[\033[38;5;5m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]] \[$(tput sgr0)\]\[\033[38;5;4m\]\\$\[$(tput sgr0)\]"
+BASHRC
+sudo enter-chroot
+cat > ~/.bashrc << BASHRC
+export PS1="{\[$(tput sgr0)\]\[\033[38;5;1m\]\t\[$(tput sgr0)\]\[\033[38;5;15m\]} \[$(tput sgr0)\]\[\033[38;5;2m\]\u\[$(tput sgr0)\]\[\033[38;5;11m\]@\[$(tput sgr0)\]\[\033[38;5;2m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] [\[$(tput sgr0)\]\[\033[38;5;5m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]] \[$(tput sgr0)\]\[\033[38;5;4m\]\\$\[$(tput sgr0)\]"
+BASHRC
+exit
 ```
 12. Reboot
 ```
