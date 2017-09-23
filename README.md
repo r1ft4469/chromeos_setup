@@ -90,25 +90,26 @@ sudo apt-get install git
 ```
 cd ~/Downloads
 git clone https://github.com/r1ft4469/chromeos_setup
-git clone https://github.com/wernight/powerline-web-fonts
+git clone https://github.com/powerline/fonts
 ```
 9. Add Powerline Fonts to Secure Shell
-```
-mv powerline-web-fonts .powerline
-Install 'Web Server for Chrome'
-Configure Server with:
-1. Run In Background
-2. Start on login
-3. Folder: /.powerline
-Start Server
-```
 Open Settings (CTRL+SHIFT+P)
 ```
 font-family: "Source Code Pro", monospace
-user-css: 127.0.0.1:8887/PowerlineFonts.css
+user-css-text:
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Source Code Pro'), url('https://github.com/powerline/fonts/blob/master/SourceCodePro/Sauce%20Code%20Powerline%20Regular.otf') format('opentype');
+}
+body {
+  font-family: 'Source Code Pro' !important;
+}
 ```
 9. Setup Vim
 ```
+sudo enter-chroot
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 cat > ~/.vimrc << VIMRC
