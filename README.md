@@ -109,7 +109,6 @@ body {
 ```
 9. Setup Vim
 ```
-sudo enter-chroot
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 cat > ~/.vimrc << VIMRC
@@ -152,4 +151,8 @@ VPN
 echo openvpn --config ~/vpn/config.ovpn --auth-user-pass >> ~/vpn/vpn.sh
 chmod +x openvpn
 cp ~/Downloads/chromeos_setup/config.ovpn ~/vpn/
+```
+12. Reboot
+```
+sudo reboot
 ```
