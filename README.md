@@ -77,12 +77,13 @@ Font Size: 13
 7. Download Repository and Extract
 8. Setup CHROOT for Kali-rolling
 ```
-sudo sh ~/Downloads/crouton -e -r kali-rolling -t core,x11 -T ~/Downloads/chromeos_setup/cli-rift.sh
+sudo sh ~/Downloads/crouton -e -r kali-rolling -t cli-extra
+sudo sh ~/Downloads/crouton -u -t extension -n kali-rolling
 ```
 9. Setup Kali
 ```
 sudo enter-chroot
-sudo apt-get install kali-linux-full
+sudo apt-get install vim curl git kali-linux-full
 sudo hostname kali
 ```
 10. Setup Git
