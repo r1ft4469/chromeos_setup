@@ -127,7 +127,7 @@ exit
 mkdir ~/vpn
 cat > ~/vpn/vpn.sh << VPN
 #!/bin/sh
-stop shill && start shill BLACKLISTED DEVICES=tun0
+stop shill && start shill BLACKLISTED_DEVICES=tun0
 VPN
 echo openvpn --config ~/vpn/config.ovpn --auth-user-pass >> ~/vpn/vpn.sh
 chmod +x openvpn
