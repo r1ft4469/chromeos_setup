@@ -71,7 +71,7 @@ term_.prefs_.set('color-palette-overrides',
 ```
 	Open Settings (CTRL+SHIFT+P)
 ```
-Font Size: 13
+Font Size: 14
 ```
 6. Install Crouton from [https://github.com/dnschneid/crouton]
 7. Download Repository and Extract
