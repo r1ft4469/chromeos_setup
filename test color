@@ -1,0 +1,40 @@
+var color_scheme = {
+        'base00': '#073642',
+        'base01': '#dc322f',
+        'base02': '#859900',
+        'base03': '#b58900',
+        'base04': '#268bd2',
+        'base05': '#d33682',
+        'base06': '#2aa198',
+        'base07': '#eee8d5',
+        'base08': '#002b36',
+        'base09': '#cb4b16',
+        'base0A': '#586e75',
+        'base0B': '#657b83',
+        'base0C': '#839496',
+        'base0D': '#6c71c4',
+        'base0E': '#93a1a1',
+        'base0F': '#fdf6e3',
+};
+
+term_.prefs_.set('background-color', "#002b36");
+term_.prefs_.set('foreground-color', "#eee8d5");
+term_.prefs_.set('cursor-color', "#eee8d5");
+
+term_.prefs_.set('color-palette-overrides', 
+                        [color_scheme.base00,
+                        color_scheme.base01,
+                        color_scheme.base02,
+                        color_scheme.base03,
+                        color_scheme.base04,
+                        color_scheme.base05,
+                        color_scheme.base06,
+                        color_scheme.base07,
+                        color_scheme.base08,
+                        color_scheme.base09,
+                        color_scheme.base0A,
+                        color_scheme.base0B,
+                        color_scheme.base0C,
+                        color_scheme.base0D,
+                        color_scheme.base0E,
+                        color_scheme.base0F]);
