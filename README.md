@@ -116,11 +116,11 @@ vmap <C-c> y:call SendViaOSC52(getreg('"'))<cr>
 VIMRC
 git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
 cd ~/.vim/bundle
-git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle
+git clone git://github.com/altercation/vim-colors-solarized.git
 git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/bundle/vim-airline-themes
 git clone git://github.com/airblade/vim-gitgutter.git
-git clone git://github.com/ervandew/supertab.git ~/.vim/bundle
-cp -r ~/Downloads/chromeos_setup/chromeoscopy ./
+git clone git://github.com/ervandew/supertab.git
+cp -r ~/Downloads/chromeos_setup-master/chromeoscopy ./
 ```
 12. Setup VPN
 ```
@@ -132,11 +132,17 @@ stop shill && start shill BLACKLISTED DEVICES=tun0
 VPN
 echo openvpn --config ~/vpn/config.ovpn --auth-user-pass >> ~/vpn/vpn.sh
 chmod +x openvpn
-cp ~/Downloads/chromeos_setup/config.ovpn ~/vpn/
+cp ~/Downloads/chromeos_setup-master/config.ovpn ~/vpn/
 ```
 13. Set .bashrc PS1
 ```
 export PS1="\[\033[38;5;7m\]{\[$(tput sgr0)\]\[\033[38;5;1m\]\t\[$(tput sgr0)\]\[\033[38;5;7m\]}\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;2m\]\u\[$(tput sgr0)\]\[\033[38;5;11m\]@\[$(tput sgr0)\]\[\033[38;5;2m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;7m\][\[$(tput sgr0)\]\[\033[38;5;5m\]\w\[$(tput sgr0)\]\[\033[38;5;7m\]]\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;4m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
+```
+14. Update chroot
+```
+sudo enter-chroot
+sudo apt-get update && sudo apt-get upgrade
+exit
 ```
 14. Reboot
 ```
