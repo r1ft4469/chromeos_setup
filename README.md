@@ -79,6 +79,7 @@ Font Size: 14
 ```
 sudo sh ~/Downloads/crouton -e -r kali-rolling -t cli-extra
 sudo sh ~/Downloads/crouton -u -t extension -n kali-rolling
+sudo sh ~/Downloads/crouton -u -t xiwi -n kali-rolling
 ```
 9. Setup Kali
 ```
