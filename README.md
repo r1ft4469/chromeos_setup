@@ -84,7 +84,6 @@ sudo sh ~/Downloads/crouton -u -t extension -n kali-rolling
 ```
 sudo enter-chroot
 sudo apt-get install vim curl git kali-linux-full
-sudo hostname kali
 ```
 10. Setup Git
 ```
