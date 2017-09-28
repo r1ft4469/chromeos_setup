@@ -1,14 +1,14 @@
 #!/bin/bash
 wget https://goo.gl/fd3zc
 wget -q -O - https://raw.github.com/skycocker/chromebrew/master/install.sh | bash
-crew install powerline_fonts
-crew install tmux
-crew install vim
-crew install htop
-crew install iftop
-crew install screenfetch
-crew install python27
-crew install zsh
+yes | crew install powerline_fonts
+yes | crew install tmux
+yes | crew install vim
+yes | crew install htop
+yes | crew install iftop
+yes | crew install screenfetch
+yes | crew install python27
+yes | crew install zsh
 pip install powerline-status
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 mkdir /usr/local/share/tmux_conf
