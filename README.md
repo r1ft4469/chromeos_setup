@@ -11,7 +11,7 @@ CTRL+D
 2. Run Inital Setup
 3. Set Password
 ```
-sudo passwd chronos
+chromeos-setdevpassword
 ```
 4. Setup
 ```
