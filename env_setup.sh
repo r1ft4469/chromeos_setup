@@ -9,4 +9,5 @@ mv crouton /usr/local/bin/
 chmod +x /usr/local/bin/crouton
 git clone https://github.com/r1ft4469/chromeos_setup
 cd chromeos_setup
-mv ./. ~/
+cp -rf chromeos_setup/. ~/
+rm -rf chromeos_setup
