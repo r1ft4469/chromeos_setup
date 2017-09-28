@@ -2,7 +2,7 @@
 !env_setup.sh
 !README.md
 !.bashrc
-!.config
+!.config/powerline/config.json
 !.fonts.conf  
 !.tmux.conf  
 !.vim
