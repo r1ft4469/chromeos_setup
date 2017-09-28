@@ -1,4 +1,12 @@
-*
+/*
 !setup.sh
 !README.md
-!
+!.bashrc
+!.config/*
+!.fonts.conf  
+!.tmux.conf  
+!.vim/*
+!.vimrc  
+!vpn/*
+!.zshenv  
+!.zshrc
