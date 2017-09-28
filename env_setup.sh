@@ -1,14 +1,14 @@
 #!/bin/bash
 wget https://raw.github.com/dnschneid/crouton/master/installer/crouton
 wget -q -O - https://raw.github.com/skycocker/chromebrew/master/install.sh | bash
-yes | crew install powerline_fonts
-yes | crew install tmux
-yes | crew install vim
-yes | crew install htop
-yes | crew install iftop
-yes | crew install screenfetch
-yes | crew install python27
-yes | crew install zsh
+Y | crew install powerline_fonts
+Y | crew install tmux
+Y | crew install vim
+Y | crew install htop
+Y | crew install iftop
+Y | crew install screenfetch
+Y | crew install python27
+Y | crew install zsh
 pip install powerline-status
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 mkdir /usr/local/share/tmux_conf
