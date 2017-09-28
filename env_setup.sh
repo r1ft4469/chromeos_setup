@@ -16,4 +16,6 @@ ln -s /usr/local/share/tmux_conf ~/.tmux
 gem install tmuxinator
 mv crouton /usr/local/bin/
 chmod +x /usr/local/bin/crouton
-git clone https://github.com/r1ft4469/chromeos_setup ~/
+git clone https://github.com/r1ft4469/chromeos_setup
+cd chromeos_setup
+mv ./. ~/
