@@ -1,5 +1,5 @@
 #!/bin/bash
-wget https://goo.gl/fd3zc
+wget https://raw.github.com/dnschneid/crouton/master/installer/crouton
 wget -q -O - https://raw.github.com/skycocker/chromebrew/master/install.sh | bash
 yes | crew install powerline_fonts
 yes | crew install tmux
