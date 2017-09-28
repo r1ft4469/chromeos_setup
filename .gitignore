@@ -5,8 +5,8 @@
 !.config/powerline/config.json
 !.fonts.conf  
 !.tmux.conf  
-!.vim
+!/.vim
 !.vimrc  
-!vpn
+!/vpn
 !.zshenv  
 !.zshrc
