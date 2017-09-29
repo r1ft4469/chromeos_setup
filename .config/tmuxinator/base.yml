@@ -43,7 +43,7 @@ root: ~/
 # post: tmux -CC attach -t base
 
 windows:
-  - editor:
+  - Main:
       layout: 49cb,265x70,0,0{168x70,0,0[168x21,0,0,0,168x48,0,22,4],96x70,169,0[96x51,169,0,1,96x18,169,52,3]}
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
