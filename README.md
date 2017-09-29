@@ -24,6 +24,7 @@ crew install iftop
 crew install screenfetch
 crew install python27
 crew install zsh
+crew install util_linux 
 wget -q -O - https://raw.githubusercontent.com/r1ft4469/chromeos_setup/master/env_setup.sh | bash
 ```
 5. Restart
