@@ -10,14 +10,15 @@ set ruler
 set wildmenu
 set showtabline=2
 set laststatus=2
-set tabstop=4
-let g:neocomplete#enable_at_startup = 1
+set tabstop=2 expandtab softtabstop=2 shiftwidth=2
 let g:solarized_termcolors=16
 colorscheme solarized
 filetype plugin indent on
 nmap <C-o> :Explore<CR>
 set rtp+=/Users/raguay/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim
-
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " These lines setup the environment to show graphics and colors correctly.
 set nocompatible
 

@@ -2,10 +2,11 @@
 !env_setup.sh
 !README.md
 !.bashrc
-!.config/powerline/config.json
+!/.config/powerline/
+!.config/tmuxinator/base.yml
+!.config/
 !.fonts.conf  
 !.tmux.conf  
-!/.vim
 !.vimrc  
 !/vpn
 !.zshenv  
