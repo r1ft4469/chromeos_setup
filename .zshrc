@@ -1,8 +1,8 @@
 export ZSH=/home/chronos/user/.oh-my-zsh
 ZSH_THEME="powerlevel9k/powerlevel9k"
 export TERM="screen-256color"
-ENABLE_CORRECTION="true"
-#COMPLETION_WAITING_DOTS="true"
+#ENABLE_CORRECTION="true"
+COMPLETION_WAITING_DOTS="true"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8

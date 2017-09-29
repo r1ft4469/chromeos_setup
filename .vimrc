@@ -11,10 +11,10 @@ set wildmenu
 set showtabline=2
 set laststatus=2
 set tabstop=4
-let g:solarized_termcolorsi=256
+let g:neocomplete#enable_at_startup = 1
+let g:solarized_termcolors=16
 colorscheme solarized
 filetype plugin indent on
-vmap <C-c> y:call SendViaOSC52(getreg('"'))<cr>
 nmap <C-o> :Explore<CR>
 set rtp+=/Users/raguay/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim
 
