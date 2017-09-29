@@ -2,7 +2,7 @@
 
 # Install Crouton
 
-				cd ~/Downloads
+				cd /tmp
 				wget https://raw.github.com/dnschneid/crouton/master/installer/crouton
 				mv crouton /usr/local/bin/
 				chmod +x /usr/local/bin/crouton
@@ -38,7 +38,7 @@
 
 # Install Settings
 
-				cd ~/Downloads
+				cd /tmp
 				git clone https://github.com/r1ft4469/chromeos_setup
 				cp -rf chromeos_setup/. ~/
 				rm -rf chromeos_setup
