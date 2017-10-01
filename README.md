@@ -31,9 +31,6 @@ ssh-keygen -t rsa -b 4096 -C $gitemail
 ```
 4. Setup
 ```
-export gituser=<GITHUB USERNAME>
-export gitemail=<GITHUB EMAIL>
-ssh-keygen -t rsa -b 4096 -C $gitemail
 wget -q -O - https://raw.githubusercontent.com/r1ft4469/chromeos_setup/master/env_setup.sh | bash
 sudo su                                                                      
 echo 1 >/var/lib/power_manager/disable_idle_suspend                          
