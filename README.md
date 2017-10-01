@@ -20,14 +20,7 @@ chromeos-setdevpassword
 4. Install Dependancies
 ```
 wget -q -O - https://raw.github.com/skycocker/chromebrew/master/install.sh | bash
-crew install powerline_fonts
-crew install tmux
-crew install vim
-crew install htop
-crew install screenfetch
-crew install python27
-crew install zsh
-crew install util_linux 
+crew install powerline_fonts tmux vim htop screenfetch python27 zsh util_linux 
 ```
 
 4. Setup
