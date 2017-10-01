@@ -39,9 +39,8 @@ cd ~
 git remote set-url origin git@github.com:r1ft4469/chromeos_setup.git
 git config --global user.name '$gituser'
 git config --global user.email '$gitemail'
-ssh-keygen -t rsa -b 4096 -C $gitemail
 curl -u $gituser \
-    --data "{\"title\":\"ChromeOS`\",\"key\":\"`cat ~/.ssh/id_rsa.pub`\"}" \
+    --data "{\"title\":\"ChromeOS\",\"key\":\"`cat ~/.ssh/id_rsa.pub`\"}" \
     https://api.github.com/user/keys
 unset gituser
 unset gitemail
