@@ -32,6 +32,10 @@ ssh-keygen -t rsa -b 4096 -C $gitemail
 4. Setup
 ```
 wget -q -O - https://raw.githubusercontent.com/r1ft4469/chromeos_setup/master/env_setup.sh | bash
+# Wait for Reboot
+```
+5. Setup Power Management
+```
 sudo su                                                                      
 echo 1 >/var/lib/power_manager/disable_idle_suspend                          
 chown power:power /var/lib/power_manager/disable_idle_suspend               
