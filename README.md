@@ -36,15 +36,21 @@ sudo enter-chroot -n spotify
 wget -q -O - https://apt.mopidy.com/mopidy.gpg | sudo apt-key add -
 sudo wget -q -O /etc/apt/sources.list.d/mopidy.list https://apt.mopidy.com/jessie.list
 sudo apt-get update
-sudo apt-get install mopidy-spotify ncmpcpp netcat vim
+sudo apt-get install mopidy-spotify ncmpcpp netcat vim ssh
 mkdir .config/mopidy
 exit
-
-cp ./.spotify_conf/top /mnt/stateful_partition/crouton/chroots/ncmpcpp/home/spotify/.ncmpcpp/
-cp ./.spotify_conf/bottom /mnt/stateful_partition/crouton/chroots/ncmpcpp/home/spotify/.ncmpcpp/
-cp ./.spotify_conf/mopidy.conf /mnt/stateful_partition/crouton/chroots/ncmpcpp/home/spotify/.config/mopidy/
-cp ./.spotify_conf/spotify_start.sh /mnt/stateful_partition/crouton/chroots/ncmpcpp/home/spotify/
-echo "Alias spotify='
+cp ./.spotify_conf/playlist /mnt/stateful_partition/crouton/chroots/spotify/home/spotify/.ncmpcpp/
+cp ./.spotify_conf/browser /mnt/stateful_partition/crouton/chroots/spotify/home/spotify/.ncmpcpp/
+cp ./.spotify_conf/vis /mnt/stateful_partition/crouton/chroots/spotify/home/spotify/.ncmpcpp/
+cp ./.spotify_conf/mopidy.conf /mnt/stateful_partition/crouton/chroots/spotify/home/spotify/.config/mopidy/
+sudo cp ./.spotify_conf/spotify.sh /mnt/stateful_partition/crouton/chroots/spotify/bin/
+sudo cp ./.spotify_conf/rc.local /mnt/stateful_partition/crouton/chroots/spotify/etc/
+sudo enter-chroot -n spotify
+sudo chmod +x /bin/spotify.sh
+exit
+sudo enter-chroot -b -n spotify spotify.sh
+ssh-copy-id -i ~/.ssh/id_rsa.pub spotify@localhost
+echo "Alias spotify='tmuxinator spotify' >> .zshenv
 ```
 5. Restart
 ```
