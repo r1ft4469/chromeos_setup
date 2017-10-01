@@ -55,3 +55,7 @@
         ssh-keygen -t rsa -b 4096 -C $gitemail
         unset gituser
         unset gitemail
+        mkdir -p /tmp/test
+        sudo mount --bind /home/chronos /tmp/test/
+        cd /tmp/test/user
+        cp ~/.fonts.con .

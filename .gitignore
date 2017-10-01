@@ -4,9 +4,11 @@
 !.bashrc
 !/.config/powerline/
 !.config/tmuxinator/base.yml
-!.config/
+!.config/tmuxinator/spotify.yml
+!/.spotify_conf/
 !.fonts.conf  
 !.tmux.conf  
 !.vimrc  
 !/vpn
 !.zshrc
+!.config/htop/htoprc

@@ -1,6 +1,6 @@
 # ~/.tmuxinator/base.yml
 
-name: Shell
+name: Spotify
 root: ~/
 
 # Optional tmux socket
@@ -43,15 +43,15 @@ root: ~/
 # post: tmux -CC attach -t base
 
 windows:
-  - Main:
-      layout: d969,265x70,0,0{168x70,0,0[168x21,0,0,0,168x48,0,22,1],96x70,169,0,2}
+  - Playlist:
+      layout: 5582,265x70,0,0[265x52,0,0{196x52,0,0,25,68x52,197,0,26},265x17,0,53,27]
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
       panes:
-        - clear && echo -e && screenfetch -E && echo -e
-        - vim
-        - htop
-  - Notes:
+        - ssh -t spotify@localhost ncmpcpp -c '~/.ncmpcpp/playlist'
+        - ssh -t spotify@localhost ncmpcpp -c '~/.ncmpcpp/browser'
+        - ssh -t spotify@localhost ncmpcpp -c '~/.ncmpcpp/vis'
+  - Search:
       panes:
-        - vim ~/.NOTES
+        - ssh -t spotify@localhost ncmpcpp -c '~/.ncmpcpp/search'
