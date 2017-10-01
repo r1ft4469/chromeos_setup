@@ -8,11 +8,15 @@ ESC+F3+Power
 At Recovery Screen
 CTRL+D
 ```
-2. Run Inital Setup
-3. Set Password
+2. Set Password
 ```
+CTRL+ALT+F2
+user: chronos
+pass: chrome
+sudo su
 chromeos-setdevpassword
 ```
+3. Run Inital Setup
 4. Setup
 ```
 wget -q -O - https://raw.githubusercontent.com/r1ft4469/chromeos_setup/master/env_setup.sh | bash
