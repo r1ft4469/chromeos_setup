@@ -22,7 +22,13 @@ chromeos-setdevpassword
 wget -q -O - https://raw.github.com/skycocker/chromebrew/master/install.sh | bash
 crew install powerline_fonts tmux vim htop screenfetch python27 zsh util_linux 
 ```
-
+4. Setup Github Keys
+```
+export gituser=<GITHUB USERNAME>
+export gitemail=<GITHUB EMAIL>
+ssh-keygen -t rsa -b 4096 -C $gitemail
+# Add Key to <https://github.com/settings/keys>
+```
 4. Setup
 ```
 export gituser=<GITHUB USERNAME>
