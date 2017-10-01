@@ -1,17 +1,5 @@
 #!/bin/bash
 
-# Install Dependancies
-wget -q -O - https://raw.github.com/skycocker/chromebrew/master/install.sh | bash
-crew install -s powerline_fonts
-crew install -s tmux
-crew install -s vim
-crew install -s htop
-crew install -s iftop
-crew install -s screenfetch
-crew install -s python27
-crew install -s zsh
-crew install -s util_linux 
-
 # Install Crouton
 cd /tmp
 wget https://raw.github.com/dnschneid/crouton/master/installer/crouton
