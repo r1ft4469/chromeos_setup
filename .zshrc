@@ -11,5 +11,5 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
 	export EDITOR='vim'
 fi
-
+alias clear='clear && echo -e && screenfetch -E && echo -e'
 source /usr/local/share/tmux_conf/tmuxinator.zsh
