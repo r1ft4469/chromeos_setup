@@ -55,3 +55,6 @@ windows:
   - Files:
       panes:
         - ranger
+  - Notes:
+      panes:
+        - sleep 5 && "vim" .NOTES
