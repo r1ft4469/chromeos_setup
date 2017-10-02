@@ -66,6 +66,8 @@ wget -q -O - https://apt.mopidy.com/mopidy.gpg | sudo apt-key add -
 sudo wget -q -O /etc/apt/sources.list.d/mopidy.list https://apt.mopidy.com/jessie.list
 sudo apt-get update
 sudo apt-get install mopidy-spotify vim ssh ncmpcpp
+vim .spotify_conf/mopidy.conf
+# Fill in Fields at Bottom for key go here: <https://www.mopidy.com/authenticate/#spotify>
 exit
 sudo enter-chroot -b -n spotify spotify.sh
 ssh-copy-id spotify@localhost
