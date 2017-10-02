@@ -48,6 +48,8 @@ restart powerd
 ```
 6. Setup Spotify
 ```
+vim .spotify_conf/mopidy.conf
+# Fill in Fields at Bottom
 sudo crouton -t cli-extra,audio, -n spotify
 mkdir /mnt/stateful_partition/crouton/chroots/spotify/home/spotify/.config
 mkdir /mnt/stateful_partition/crouton/chroots/spotify/home/spotify/.config/mopidy
