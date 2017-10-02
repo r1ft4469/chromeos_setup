@@ -6,6 +6,7 @@
 !.config/tmuxinator/base.yml
 !.config/tmuxinator/spotify.yml
 !/.spotify_conf/
+/spotify_conf/mopidy.conf
 !.fonts.conf  
 !.tmux.conf  
 !.vimrc  
