@@ -37,8 +37,6 @@ cp -rf chromeos_setup/. ~/
 rm -rf chromeos_setup
 cd ~
 git remote set-url origin git@github.com:r1ft4469/chromeos_setup.git
-git config --global user.name '$gituser'
-git config --global user.email '$gitemail'
 unset gituser
 unset gitemail
 
