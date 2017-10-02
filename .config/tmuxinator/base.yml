@@ -52,6 +52,3 @@ windows:
         - clear
         - vim
         - htop
-  - Notes:
-      panes:
-        - vim ~/.NOTES

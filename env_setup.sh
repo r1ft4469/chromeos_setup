@@ -29,6 +29,10 @@ git clone git://github.com/airblade/vim-gitgutter.git
 git clone git://github.com/ervandew/supertab
 git clone git://github.com/SirVer/ultisnips
 git clone https://github.com/honza/vim-snippets.git
+cd /usr/local/share
+git clone https://github.com/degyves/VimPyServer.git
+cd ~/.vim/bundle
+ln -s /usr/local/share/VimPyServer/ VimPyServer
 
 # Install Settings
 cd /tmp

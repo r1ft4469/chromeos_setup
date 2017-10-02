@@ -19,6 +19,8 @@ set rtp+=/Users/raguay/Library/Python/2.7/lib/python/site-packages/powerline/bin
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+:cnoreabbrev wq w<bar>bd
+:cnoreabbrev q bd
 " These lines setup the environment to show graphics and colors correctly.
 set nocompatible
 
