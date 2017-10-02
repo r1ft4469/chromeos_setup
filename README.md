@@ -24,9 +24,9 @@ crew install powerline_fonts tmux vim htop screenfetch python27 zsh util_linux
 ```
 4. Setup Github Keys
 ```
-export gituser=<GITHUB USERNAME>
-export gitemail=<GITHUB EMAIL>
-ssh-keygen -t rsa -b 4096 -C $gitemail
+git config --global user.name <GITHUB Username>
+git config --global user.email <GITHUB Email>
+ssh-keygen -t rsa -b 4096 -C <GITHUB Email>
 # Add Key to <https://github.com/settings/keys>
 ```
 4. Setup
