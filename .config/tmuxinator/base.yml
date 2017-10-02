@@ -52,3 +52,6 @@ windows:
         - clear
         - vim
         - htop
+  - Files:
+      panes:
+        - ranger
