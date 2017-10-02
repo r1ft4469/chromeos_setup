@@ -7,7 +7,9 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 function vimopen() {
-echo "$1"
+  if [[ $# -ne 0 ]]; then
+    echo "$1 Opened in vim"
+  fi
   if [[ "$1" = /* ]]; then
     echo "e $1" | nc -c localhost 9876
   else

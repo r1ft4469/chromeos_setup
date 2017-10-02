@@ -2,19 +2,6 @@ if [[ $- != *i* ]] ; then
 	# Shell is non-interactive.  Be done now!
 	return
 fi
-function vimopen() {
-  echo "$1"
-  if [[ "$1" = /* ]]; then
-    echo "e $1" | nc -c localhost 9876
-  else
-    if [[ $# -eq 0 ]]; then
-      vim
-    else
-      echo "e $PWD/$1" | nc -c localhost 9876
-    fi
-  fi
-}
-alias vim=vimopen
 export EDITOR='vim'
 export TERM=screen-256color
 powerline-daemon -q
