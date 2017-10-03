@@ -14,7 +14,7 @@ CTRL+ALT+F2
 user: chronos
 pass: chrome
 sudo su
-chromeos-setdevpassword
+chromeos-setdevpasswd
 ```
 3. Run Inital Setup
 4. Install Dependancies
