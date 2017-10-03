@@ -50,9 +50,3 @@ cp -rf chromeos_setup/. ~/
 rm -rf chromeos_setup
 cd ~
 git remote set-url origin git@github.com:r1ft4469/chromeos_setup.git
-unset gituser
-unset gitemail
-
-echo "Rebooting in 10 sec ..."
-sleep 10
-sudo reboot
