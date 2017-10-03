@@ -37,14 +37,14 @@ mkdir -p /tmp/test
 sudo mount --bind /home/chronos /tmp/test/
 cd /tmp/test/user
 cp ~/.fonts.con .
-sudo reboot
 ```
 5. Setup Power Management
 ```
 sudo su                                                                      
 echo 1 >/var/lib/power_manager/disable_idle_suspend                          
 chown power:power /var/lib/power_manager/disable_idle_suspend               
-restart powerd                                                                 
+restart powerd  
+sudo reboot
 ```
 6. Setup Spotify
 ```
