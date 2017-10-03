@@ -9,6 +9,15 @@ chmod +x /usr/local/bin/crouton
 # Install Powerline
 pip install powerline-status
 
+# Install Midnight Commander
+cd /usr/local/share
+git clone https://github.com/iwfmp/midnight-commander
+cd mc
+./autogen.sh
+./configure
+make
+make install
+
 # Install Oh-My-ZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k

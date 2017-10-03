@@ -54,7 +54,7 @@ windows:
         - htop
   - Files:
       panes:
-        - ranger
+        - mc
   - Notes:
       panes:
         - sleep 5 && "vim" .NOTES

@@ -13,3 +13,5 @@
 !/vpn
 !.zshrc
 !.config/htop/htoprc
+!.mc/solarized.ini
+!/.config/mc/

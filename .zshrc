@@ -31,4 +31,5 @@ alias clear='clear && echo -e && screenfetch -E && echo -e'
 clear
 export VIMPYSERVER_HOME='/usr/local/share/VimPyServer'
 export PATH=$VIMPYSERVER_HOME/bin:$PATH
+export MC_SKIN=$HOME/.mc/solarized.ini
 source /usr/local/share/tmux_conf/tmuxinator.zsh
