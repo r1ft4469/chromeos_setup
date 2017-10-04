@@ -3,7 +3,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 export TERM="screen-256color"
 #ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
-plugins=(git)
+plugins=(git tmux python ruby sudo)
 source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 function vimopen() {
@@ -20,7 +20,31 @@ function vimopen() {
     fi
   fi
 }
-export -f vimopen
+function extract() { 
+  if [ -f $1 ] ; then 
+    case $1 in 
+      *.tar.bz2)   tar xjf $1     ;; 
+      *.tar.gz)    tar xzf $1     ;; 
+      *.bz2)       bunzip2 $1     ;; 
+      *.rar)       unrar e $1     ;; 
+      *.gz)        gunzip $1      ;; 
+      *.tar)       tar xf $1      ;; 
+      *.tbz2)      tar xjf $1     ;; 
+      *.tgz)       tar xzf $1     ;; 
+      *.zip)       unzip $1       ;; 
+      *.Z)         uncompress $1  ;; 
+      *.7z)        7z x $1        ;; 
+      *)     echo "'$1' cannot be extracted via extract()" ;; 
+        esac 
+      else 
+        echo "'$1' is not a valid file" 
+      fi 
+}
+function md5check() { 
+  md5sum "$1" | grep "$2";
+}
+alias genpasswd="strings /dev/urandom | grep -o '[[:alnum:]]' | head -n 30 | tr -d '\n'; echo" 
+ export -f vimopen
 alias vim=vimopen
 if [[ -n $SSH_CONNECTION ]]; then
 	export EDITOR='vim'
