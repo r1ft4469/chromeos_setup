@@ -50,4 +50,5 @@ git clone https://github.com/r1ft4469/chromeos_setup
 cp -rf chromeos_setup/. ~/
 rm -rf chromeos_setup
 cd ~
+git config --global core.pager cat
 git remote set-url origin git@github.com:r1ft4469/chromeos_setup.git
