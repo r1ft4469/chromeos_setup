@@ -11,12 +11,20 @@ function vimopen() {
     echo "$1 Opened in vim"
   fi
   if [[ "$1" = /* ]]; then
-    echo "e $1" | nc -c localhost 9876
+    if [[ -d "$1" ]];then
+      echo "Te|cd $1" | nc -c localhost 9876
+    else
+      echo "e! $1" | nc -c localhost 9876
+    fi
   else
     if [[ $# -eq 0 ]]; then
       vim
     else
-      echo "e $PWD/$1" | nc -c localhost 9876
+      if [[ -d "$1" ]]; then
+        echo "Te|cd $PWD/$1" | nc -c localhost 9876
+      else
+        echo "e! $PWD/$1" | nc -c localhost 9876
+      fi
     fi
   fi
 }
@@ -44,7 +52,7 @@ function md5check() {
   md5sum "$1" | grep "$2";
 }
 alias genpasswd="strings /dev/urandom | grep -o '[[:alnum:]]' | head -n 30 | tr -d '\n'; echo" 
- export -f vimopen
+export -f vimopen
 alias vim=vimopen
 if [[ -n $SSH_CONNECTION ]]; then
 	export EDITOR='vim'
