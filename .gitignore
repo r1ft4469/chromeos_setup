@@ -1,4 +1,7 @@
+# Ignore Everything
 /*
+
+# Except
 !env_setup.sh
 !README.md
 !.bashrc
@@ -6,11 +9,9 @@
 !.config/tmuxinator/base.yml
 !.config/tmuxinator/spotify.yml
 !/.spotify_conf/
-/spotify_conf/mopidy.conf
 !.fonts.conf  
 !.tmux.conf  
 !.vimrc  
-!/vpn
 !.zshrc
 !.config/htop/htoprc
 !/.mc/solarized.ini
