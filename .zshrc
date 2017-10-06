@@ -7,7 +7,11 @@ plugins=(git tmux python ruby sudo)
 source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs ip battery time)
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user dir dir_writable vcs)
+POWERLEVEL9K_IP_BACKGROUND=green
+POWERLEVEL9k_VCS_CLEAN_BACKGROUND=white
+POWERLEVEL9k_VCS_UNTRACKED_BACKGROUND=orange
+POWERLEVEL9k_VCS_MODIFIED_BACKGROUND=green
 
 # Vim
 function vimopen() {
