@@ -10,7 +10,11 @@ set ruler
 set wildmenu
 set showtabline=2
 set laststatus=2
-set tabstop=2 expandtab softtabstop=2 shiftwidth=2
+set tabstop=4 
+set expandtab 
+set softtabstop=4 
+set shiftwidth=4
+set hidden
 let g:solarized_termcolors=16
 colorscheme solarized
 filetype plugin indent on
@@ -25,14 +29,30 @@ set nocompatible
 nnoremap <F1> :bn<CR>
 nnoremap <F2> :bN<CR>
 
-function! NERDTreeToggleInCurDir()
-  if (exists("t:NERDTreeBufName") && bufwinnr(t:NERDTreeBufName) != -1)
-    exe ":NERDTreeClose"
-  else
-    exe ":NERDTreeFind"
-  endif
+let g:NetrwIsOpen=0
+
+function! ToggleNetrw()
+    if g:NetrwIsOpen
+        let i = bufnr("$")
+        while (i >= 1)
+            if (getbufvar(i, "&filetype") == "netrw")
+                silent exe "bwipeout " . i 
+            endif
+            let i-=1
+        endwhile
+        let g:NetrwIsOpen=0
+    else
+        let g:NetrwIsOpen=1
+        silent Lexplore
+    endif
 endfunction
-nmap <silent> <C-o> :call NERDTreeToggleInCurDir()<cr>
+let g:netrw_liststyle=3
+let g:netrw_winsize=20
+let g:netrw_banner=0
+let g:netrw_browse_split=4
+let s:treedepthstring= "↳ "
+set autochdir
+map <silent> <C-o> :call ToggleNetrw()<CR>
 
 let g:minBufExplForceSyntaxEnable = 1
 python from powerline.vim import setup as powerline_setup
@@ -40,12 +60,12 @@ python powerline_setup()
 python del powerline_setup
 
 if ! has('gui_running')
-   set ttimeoutlen=10
-   augroup FastEscape
-      autocmd!
-      au InsertEnter * set timeoutlen=0
-      au InsertLeave * set timeoutlen=1000
-   augroup END
+    set ttimeoutlen=10
+    augroup FastEscape
+        autocmd!
+        au InsertEnter * set timeoutlen=0
+        au InsertLeave * set timeoutlen=1000
+    augroup END
 endif
 
 set laststatus=2 " Always display the statusline in all windows

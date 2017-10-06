@@ -12,18 +12,18 @@ function vimopen() {
   fi
   if [[ "$1" = /* ]]; then
     if [[ -d "$1" ]];then
-      echo "Te|cd $1" | nc -c localhost 9876
+      echo "Lex $1" | nc -c localhost 9876
     else
-      echo "e! $1" | nc -c localhost 9876
+      echo "e $1" | nc -c localhost 9876
     fi
   else
     if [[ $# -eq 0 ]]; then
       vim
     else
       if [[ -d "$1" ]]; then
-        echo "Te|cd $PWD/$1" | nc -c localhost 9876
+        echo "Lex $PWD/$1" | nc -c localhost 9876
       else
-        echo "e! $PWD/$1" | nc -c localhost 9876
+        echo "e $PWD/$1" | nc -c localhost 9876
       fi
     fi
   fi
