@@ -69,5 +69,4 @@ vim .config/mopidy/mopidy.conf
 exit
 sudo enter-chroot -b -n spotify spotify.sh
 ssh-copy-id spotify@localhost
-echo "Alias spotify='tmuxinator spotify' >> .zshenv"
 ```

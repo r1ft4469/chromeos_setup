@@ -22,6 +22,5 @@ elif [ "$SSH_AUTH_SOCK" ] && [ $agent_run_state = 1 ]; then
   ssh-add
 fi
 unset env
-pgrep spotify.sh || sudo enter-chroot -b -n spotify spotify.sh
 tmuxinator base
 exit

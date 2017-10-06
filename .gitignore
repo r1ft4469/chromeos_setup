@@ -15,4 +15,4 @@
 !.config/htop/htoprc
 !/.mc/solarized.ini
 !/.config/mc/
-!/ssh_open.sh
+!/.zshenv

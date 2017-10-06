@@ -49,9 +49,9 @@ windows:
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
       panes:
-        - ssh -t spotify@localhost ncmpcpp -c '~/.ncmpcpp/playlist'
-        - ssh -t spotify@localhost ncmpcpp -c '~/.ncmpcpp/browser'
-        - ssh -t spotify@localhost ncmpcpp -c '~/.ncmpcpp/vis'
+        - sleep 2 && ssh -t spotify@localhost ncmpcpp -c '~/.ncmpcpp/playlist'
+        - sleep 4 && ssh -t spotify@localhost ncmpcpp -c '~/.ncmpcpp/browser'
+        - sleep 6 && ssh -t spotify@localhost ncmpcpp -c '~/.ncmpcpp/vis'
   - Search:
       panes:
         - ssh -t spotify@localhost ncmpcpp -c '~/.ncmpcpp/search'
