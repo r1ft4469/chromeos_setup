@@ -6,6 +6,8 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git tmux python ruby sudo)
 source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs ip battery time)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv vcs)
 
 # Vim
 function vimopen() {
