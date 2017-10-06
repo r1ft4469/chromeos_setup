@@ -1,11 +1,13 @@
+# Oh-My-Zsh
 export ZSH=/home/chronos/user/.oh-my-zsh
 ZSH_THEME="powerlevel9k/powerlevel9k"
 export TERM="screen-256color"
-#ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 plugins=(git tmux python ruby sudo)
 source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
+
+# Vim
 function vimopen() {
   if [[ $# -ne 0 ]]; then
     echo "$1 Opened in vim"
@@ -28,6 +30,23 @@ function vimopen() {
     fi
   fi
 }
+export -f vimopen
+alias vim=vimopen
+if [[ -n $SSH_CONNECTION ]]; then
+	export EDITOR='vim'
+else
+	export EDITOR='vim'
+fi
+export VIMPYSERVER_HOME='/usr/local/share/VimPyServer'
+export PATH=$VIMPYSERVER_HOME/bin:$PATH
+
+# Midnight Commander
+export MC_SKIN=$HOME/.mc/solarized.ini
+
+# Tmuxinator
+source /usr/local/share/tmux_conf/tmuxinator.zsh
+
+# Extract
 function extract() { 
   if [ -f $1 ] ; then 
     case $1 in 
@@ -48,20 +67,15 @@ function extract() {
         echo "'$1' is not a valid file" 
       fi 
 }
+alias x='extract'
+
+# MD5 Checker
 function md5check() { 
   md5sum "$1" | grep "$2";
 }
-alias genpasswd="strings /dev/urandom | grep -o '[[:alnum:]]' | head -n 30 | tr -d '\n'; echo" 
-export -f vimopen
-alias vim=vimopen
-if [[ -n $SSH_CONNECTION ]]; then
-	export EDITOR='vim'
-else
-	export EDITOR='vim'
-fi
+
+# Clear
 alias clear='clear && echo -e && screenfetch -E && echo -e'
+
+# Shell Setup
 clear
-export VIMPYSERVER_HOME='/usr/local/share/VimPyServer'
-export PATH=$VIMPYSERVER_HOME/bin:$PATH
-export MC_SKIN=$HOME/.mc/solarized.ini
-source /usr/local/share/tmux_conf/tmuxinator.zsh

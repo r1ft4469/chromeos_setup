@@ -1,5 +1,8 @@
+" Pathogen
 execute pathogen#infect()
 syntax enable
+
+" Settings
 set background=dark
 set number
 set autoindent
@@ -15,22 +18,32 @@ set expandtab
 set softtabstop=4 
 set shiftwidth=4
 set hidden
+set nocompatible
+set autochdir
+set laststatus=2
+set guifont=Inconsolata\ for\ Powerline:h14
+set noshowmode
+
+
+" Binds
+:cnoreabbrev wq w<bar>bd
+:cnoreabbrev q bd
+nnoremap <F1> :bn<CR>
+nnoremap <F2> :bN<CR>
+map <silent> <C-o> :call ToggleNetrw()<CR>
+
+" Color Scheme
 let g:solarized_termcolors=16
 colorscheme solarized
 filetype plugin indent on
-set rtp+=/Users/raguay/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim
+
+" UltiSnips
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-:cnoreabbrev wq w<bar>bd
-:cnoreabbrev q bd
-set nocompatible
 
-nnoremap <F1> :bn<CR>
-nnoremap <F2> :bN<CR>
-
+" Netrw
 let g:NetrwIsOpen=0
-
 function! ToggleNetrw()
     if g:NetrwIsOpen
         let i = bufnr("$")
@@ -50,15 +63,13 @@ let g:netrw_liststyle=3
 let g:netrw_winsize=20
 let g:netrw_banner=0
 let g:netrw_browse_split=4
-let s:treedepthstring= "↳ "
-set autochdir
-map <silent> <C-o> :call ToggleNetrw()<CR>
 
+" Powerline
+set rtp+=/Users/raguay/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim
 let g:minBufExplForceSyntaxEnable = 1
 python from powerline.vim import setup as powerline_setup
 python powerline_setup()
 python del powerline_setup
-
 if ! has('gui_running')
     set ttimeoutlen=10
     augroup FastEscape
@@ -68,7 +79,5 @@ if ! has('gui_running')
     augroup END
 endif
 
-set laststatus=2 " Always display the statusline in all windows
-set guifont=Inconsolata\ for\ Powerline:h14
-set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
+" VimPyServer
 let g:VimPyServer_autostart=1
