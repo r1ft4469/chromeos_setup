@@ -77,5 +77,5 @@ function md5check() {
 # Clear
 alias clear='clear && echo -e && screenfetch -E && echo -e'
 
-# Shell Setup
+# Shell Clear on Start
 clear
