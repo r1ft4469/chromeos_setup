@@ -22,12 +22,13 @@ chromeos-setdevpasswd
 wget -q -O - https://raw.github.com/skycocker/chromebrew/master/install.sh | bash
 crew install powerline_fonts tmux vim htop screenfetch python27 zsh util_linux netcat libtool glib autoconf
 ```
-4. Setup Github Keys
+4. Setup Git Keys
 ```
-git config --global user.name <GITHUB Username>
-git config --global user.email <GITHUB Email>
-ssh-keygen -t rsa -b 4096 -C <GITHUB Email>
+git config --global user.name <HostName>
+git config --global user.email <Email>
+ssh-keygen -t rsa -b 4096 -C <Email>
 # Add Key to <https://github.com/settings/keys>
+# Add Key to <https://bitbucket.org>
 ```
 4. Setup
 ```
@@ -38,15 +39,7 @@ sudo mount --bind /home/chronos /tmp/test/
 cd /tmp/test/user
 cp ~/.fonts.con .
 ```
-5. Setup Power Management
-```
-sudo su                                                                      
-echo 1 >/var/lib/power_manager/disable_idle_suspend                          
-chown power:power /var/lib/power_manager/disable_idle_suspend               
-restart powerd  
-sudo reboot
-```
-6. Setup Spotify
+5. Setup Spotify
 ```
 sudo crouton -t cli-extra,audio -n spotify
 mkdir /mnt/stateful_partition/crouton/chroots/spotify/home/spotify/.config

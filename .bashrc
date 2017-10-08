@@ -4,6 +4,9 @@ if [[ $- != *i* ]] ; then
 	return
 fi
 
+# IP Address VAR
+export ip_addr=$(ip addr show | grep '\<inet\>' | tr -s ' ' | cut -d ' ' -f3 | sed /127.0.0.1/d | sed 's/...$//' | sed 'H;1h;$!d;x;y/\n/,/')
+
 # VARS
 export EDITOR='vim'
 export TERM=screen-256color
@@ -12,7 +15,7 @@ export TERM=screen-256color
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
-. /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+export POWERLINE_CONFIG_COMMAND=/usr/local/bin/
 
 # SSH Agent
 env=~/.ssh/agent.env

@@ -9,15 +9,6 @@ chmod +x /usr/local/bin/crouton
 # Install Powerline
 pip install powerline-status
 
-# Install Midnight Commander
-cd /usr/local/share
-git clone https://github.com/iwfmp/midnight-commander
-cd mc
-./autogen.sh
-./configure
-make
-make install
-
 # Install Oh-My-ZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
@@ -38,6 +29,7 @@ git clone git://github.com/airblade/vim-gitgutter.git
 git clone git://github.com/ervandew/supertab
 git clone git://github.com/SirVer/ultisnips
 git clone https://github.com/honza/vim-snippets.git
+git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
 cd /usr/local/share
 git clone https://github.com/degyves/VimPyServer.git
 cd ~/.vim/bundle

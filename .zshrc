@@ -1,4 +1,5 @@
 # Oh-My-Zsh
+POWERLEVEL9k_MODE='awsome-fontconfig'
 export ZSH=/home/chronos/user/.oh-my-zsh
 ZSH_THEME="powerlevel9k/powerlevel9k"
 export TERM="screen-256color"
@@ -6,12 +7,9 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git tmux python ruby sudo)
 source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs ip battery time)
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user dir dir_writable vcs)
-POWERLEVEL9K_IP_BACKGROUND=green
-POWERLEVEL9k_VCS_CLEAN_BACKGROUND=white
-POWERLEVEL9k_VCS_UNTRACKED_BACKGROUND=orange
-POWERLEVEL9k_VCS_MODIFIED_BACKGROUND=green
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs battery time)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir dir_writable vcs)
+POWERLEVEL9K_IP_BACKGROUND='green'
 
 # Vim
 function vimopen() {
@@ -83,5 +81,7 @@ function md5check() {
 # Clear
 alias clear='clear && echo -e && screenfetch -E && echo -e'
 
-# Shell Clear on Start
+# zsh Final Commands
+powerline-config tmux setup
 clear
+

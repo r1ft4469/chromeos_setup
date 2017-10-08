@@ -5,14 +5,11 @@ root: ~/
 
 windows:
   - Main:
-      layout: d969,265x70,0,0{168x70,0,0[168x21,0,0,0,168x48,0,22,1],96x70,169,0,2}
+      layout: b9a2,265x74,0,0{171x74,0,0[171x25,0,0,0,171x48,0,26,2],93x74,172,0,3} 
       panes:
         - sleep 1 && clear
         - vim
-        - htop
-  - Files:
-      panes:
-        - mc
+        - htop -u chronos
   - Notes:
       panes:
         - sleep 5 && "vim" .NOTES
